@@ -1,8 +1,6 @@
 - Unix
 - Bash
 - Git
+- JS
 - HTML
-<trybe-skills-update
-=======
 - CSS
->master
