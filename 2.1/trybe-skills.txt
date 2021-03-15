@@ -1,6 +1,8 @@
 - Unix
 - Bash
 - Git
+- JS
 - HTML
 - CSS
 - JS
+- TESTE
