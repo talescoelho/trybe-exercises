@@ -1,4 +1,12 @@
 - Unix
 - Bash
 - Git
+<<<<<<< HEAD
 - HTML
+=======
+- JS
+- HTML
+- CSS
+- JS
+- TESTE
+>>>>>>> 528a896c83e3de60f08f12d065aa57eee16f017b
