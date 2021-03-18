@@ -5,18 +5,47 @@
     <title>HTML</title>
     <style>
 
-        h1 {
-            font-size: 65px;
-            color: orange;
-        }
+      body {
+        font-size: 16px;
+      }
 
-        li {
-            background-color: red;
-        }
+      h1 {
+          font-size: 65px;
+          color: orange;
+          font-family: sans-serif;
+      }
 
-        .bg-color {
-            background-color: blue;
-        }
+      p {
+        font-weight: 600;
+        font-size: 3em;
+      }
+
+      li {
+          background-color: red;
+      }
+
+      .bg-color {
+          background-color: blue;
+      }
+
+      .bg-amarelo {
+        background-color: yellow;
+      }
+
+      .bg-vermelho {
+        background-color: red;
+      }
+
+      .bg-marrom {
+        background-color: brown;
+      }
+
+      .bg-amarelo, .bg-marrom, .bg-vermelho {
+        font-style: italic;
+        line-height: 2em;
+        text-align: center;
+        text-decoration: line-through;
+      }
 
 
     </style>
@@ -25,17 +54,18 @@
     <h1>Exercícios 3.2</h1>
     <p class="bg-color">Qual é a sua cor favorita?</p>
     <ul class="bg-color">
-      <li><strong>Azul</strong></li>
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li class="bg-amarelo">Amarelo</li>
+      <li class="bg-vermelho">Vermelho</li>
+      <li class="bg-marrom">Marrom</li>
     </ul>
 
     <!-- Exercícios
-     1 - Modifique o tamanho do h1 para 65 pixels
-     2 - Modifique a cor do texto do h1 para laranja
-     3 - Modifique a cor de fundo da lista não ordenada
-     4 - Crie uma classe para modificar a cor de fundo da tag p e da ul ao mesmo tempo
+     1 - Modifique o família do h1 para sans-serif
+     2 - Deixe o parágrafo com o font-weight 600
+     3 - Modifique o font-size do body para 16px
+     4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body
+     5 - Explore as propriedades font-style, line-height, text-align e text-decoration
+     6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto
     -->
   </body>
 </html>
