@@ -87,5 +87,50 @@ ul, ol {
 /* Aqui vou fazer o 4º exercício */
 
 #container {
-  border: none;
+  /* border: 1px solid red; */
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+
+.border-hover:hover {
+  border: 1px solid black;
+}
+
+#first {
+ color: blue;
+}
+
+#second {
+  color: purple;
+}
+
+#additional {
+  color: blueviolet;
+}
+
+#dark {
+  color: darkred;
+}
+
+#light {
+  color: lightslategrey;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3.big {
+  font-size: 40px;
+}
+
+
+/* .border-hover:nth-child(2n+1){
+  font-style: italic;
+} */
+
+#container div:nth-child(2n+1){
+  font-style: italic;
 }
