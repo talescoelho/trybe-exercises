@@ -83,3 +83,9 @@ li:active {
 ul, ol {
   list-style: none;
 }
+
+/* Aqui vou fazer o 4º exercício */
+
+#container {
+  border: none;
+}
