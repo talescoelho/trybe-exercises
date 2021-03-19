@@ -76,3 +76,6 @@ li:hover {
   background-color: blue;
 }
 
+li:active {
+  font-family: Arial, Helvetica, sans-serif;
+}
