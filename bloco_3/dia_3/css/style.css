@@ -1,0 +1,67 @@
+.caixa {
+  color: white;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.width-and-height {
+  height: 50px;
+  width: 50px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.margin {
+  margin: 30px;
+}
+
+.border {
+  border: 5px solid black;
+}
+
+/* Aqui irei colocar o exercício 2 do dia 3 */
+
+.super-mario, .goomba, .word, .baloon, .bowser {
+  width: 100%;
+}
+
+#mario, #goomba,  #word, #baloon, #bowser {
+  width: 100px;
+  position: absolute;
+  left: 40px;
+}
+
+#word {
+  text-align: center;
+}
+
+#mario {
+  z-index: 1;
+} 
+
+#goomba {
+  z-index: 2;
+  top: 250px;
+}  
+
+#word {
+  z-index: 4;
+  left: 300px;
+
+}
+
+#baloon {
+  z-index: 3;
+  left: 302px;
+  top: 88px;
+} 
+
+#bowser {
+  z-index: 5;
+  top: 100px;
+  left: 400px;
+}
