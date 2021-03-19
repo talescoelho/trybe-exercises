@@ -35,3 +35,33 @@
   left: 40px;
 }
 
+#word {
+  text-align: center;
+}
+
+#mario {
+  z-index: 1;
+} 
+
+#goomba {
+  z-index: 2;
+  top: 250px;
+}  
+
+#word {
+  z-index: 4;
+  left: 300px;
+
+}
+
+#baloon {
+  z-index: 3;
+  left: 302px;
+  top: 88px;
+} 
+
+#bowser {
+  z-index: 5;
+  top: 100px;
+  left: 400px;
+}
