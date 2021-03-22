@@ -10,7 +10,6 @@ body {
 /* Cabeçalho */
 
 #header {
-  border: 1px solid red;
 }
 
 #header h1, ul{
@@ -18,8 +17,6 @@ body {
 }
 
 .nav-bar-horizontal span {
-
-  border: 1px solid red;
 }
 
 .nav-bar-horizontal li{
@@ -33,17 +30,23 @@ body {
 }
 
 .content {
-  width: 75%;
-  min-width: 760px;
   display: inline-block;
+  width: 65%;
+  min-width: 760px;
 }
 
 .about {
   height: 75%;
 }
 
+.container {
+  clear: both;
+}
+
 .container-section {
+  float: left;
   display: inline-block;
+  bottom: 50%;
   text-align: center;
   width: 250px;
 }
@@ -57,6 +60,10 @@ body {
   display: inline-block;
   float: right;
   width: 24%;
+}
+
+.reference {
+  float: left;
 }
 
 /* Footer */
