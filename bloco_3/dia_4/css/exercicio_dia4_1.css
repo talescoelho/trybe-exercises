@@ -1,3 +1,8 @@
+* {
+  border: 0;
+  padding: 0;
+}
+
 body {
   background-color: #5DD7FD;
 }
@@ -20,6 +25,7 @@ body {
 
 .container-section {
   display: inline-block;
+  text-align: center;
   width: 250px;
 }
 
@@ -27,8 +33,6 @@ body {
   width: 145px;
   height: 100px;
 }
-
-
 
 .side-bar {
   display: inline-block;
