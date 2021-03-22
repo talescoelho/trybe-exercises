@@ -26,14 +26,23 @@ body {
 
 /* Main block */
 
+.content h3{
+  margin-bottom: 0px;
+}
+
+.content .about p {
+  margin-top: 0;
+  text-align: justify;
+}
+
 #main {
-  min-width: 1029px;
+  width: 1129px;
 }
 
 .content {
   display: inline-block;
-  width: 65%;
-  min-width: 760px;
+  width: 766px;
+  min-width: 727px;
 }
 
 .about {
@@ -45,6 +54,9 @@ body {
 }
 
 .container-section {
+  margin: 0 1px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 134, 187);
   float: left;
   display: inline-block;
   bottom: 50%;
@@ -60,8 +72,7 @@ body {
 .side-bar {
   display: inline-block;
   float: right;
-  max-width: 34%;
-  min-width: 5%;
+  min-width: 250px;
 }
 
 .reference {
