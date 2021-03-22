@@ -2,12 +2,37 @@ body {
   background-color: #5DD7FD;
 }
 
+#main {
+  border: 1px solid red;
+  min-width: 1029px;
+}
+
+.content {
+  width: 75%;
+  min-width: 760px;
+  border: 1px solid red;
+  display: inline-block;
+}
+
+.about {
+  height: 75%;
+}
+
 .container-section {
   display: inline-block;
-  width: 25%;
+  width: 250px;
 }
 
 .container-section img{
   width: 145px;
   height: 100px;
+}
+
+
+
+.side-bar {
+  display: inline-block;
+  float: right;
+  width: 24%;
+  border: 1px solid red;
 }
