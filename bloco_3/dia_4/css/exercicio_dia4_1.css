@@ -7,15 +7,25 @@ body {
   background-color: #5DD7FD;
 }
 
-#main {
+/* Cabeçalho */
+
+#header {
   border: 1px solid red;
+}
+
+.nav-bar-horizontal li{
+  display: inline-block;
+}
+
+/* Main block */
+
+#main {
   min-width: 1029px;
 }
 
 .content {
   width: 75%;
   min-width: 760px;
-  border: 1px solid red;
   display: inline-block;
 }
 
@@ -38,5 +48,6 @@ body {
   display: inline-block;
   float: right;
   width: 24%;
-  border: 1px solid red;
 }
+
+/* Footer */
