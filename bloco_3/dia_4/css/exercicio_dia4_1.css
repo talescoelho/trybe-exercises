@@ -11,6 +11,7 @@ body {
 /* Cabeçalho */
 
 #header {
+  width: 1129px;
 }
 
 #header h1, ul{
@@ -47,6 +48,7 @@ body {
 
 .about {
   height: 75%;
+  padding-right: 5px;
 }
 
 .container {
@@ -80,3 +82,10 @@ body {
 }
 
 /* Footer */
+
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+}
