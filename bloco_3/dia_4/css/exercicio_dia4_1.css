@@ -5,6 +5,7 @@
 
 body {
   background-color: #5ED7FD;
+  min-width: 1029px;
 }
 
 /* Cabeçalho */
@@ -59,7 +60,8 @@ body {
 .side-bar {
   display: inline-block;
   float: right;
-  width: 24%;
+  max-width: 34%;
+  min-width: 5%;
 }
 
 .reference {
