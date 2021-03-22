@@ -21,9 +21,6 @@ body {
   margin: 0;
 }
 
-.nav-bar-horizontal span {
-}
-
 .nav-bar-horizontal li{
   border: 1px solid rgb(0, 107, 121);
   display: inline-block;
@@ -98,7 +95,21 @@ body {
 }
 
 .reference {
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100px;
+}
+
+.reference li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.reference a {
+  display: inline-block;
 }
 
 /* Footer */
@@ -108,4 +119,5 @@ body {
   margin-right: auto;
   text-align: center;
   width: 50%;
+  margin-top: 10px;
 }
