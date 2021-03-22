@@ -4,12 +4,21 @@
 }
 
 body {
-  background-color: #5DD7FD;
+  background-color: #5ED7FD;
 }
 
 /* Cabeçalho */
 
 #header {
+  border: 1px solid red;
+}
+
+#header h1, ul{
+  margin: 0;
+}
+
+.nav-bar-horizontal span {
+
   border: 1px solid red;
 }
 
