@@ -1,0 +1,1 @@
+Trabalhando com tipos de variáveis e operações matemáticas básicas.
