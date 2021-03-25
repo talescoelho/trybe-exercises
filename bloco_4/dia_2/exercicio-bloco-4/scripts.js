@@ -26,7 +26,7 @@ else {
 }
 
 // 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
-let maior = 0;
+let maior = numbers[0];
 for (let i of numbers){
   if (maior < i) {
     maior = i;
@@ -49,7 +49,7 @@ else{
 }
 
 // 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
-let menor = numbers[1];
+let menor = numbers[0];
 for (let i of numbers){
   if (menor > i) {
     menor = i;
