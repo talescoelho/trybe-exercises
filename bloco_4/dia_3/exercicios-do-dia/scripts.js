@@ -9,7 +9,7 @@ let n = 5;
 let square = '';
 
 for (let index = 0; index < n; index += 1){
-  square = square+'*';
+  square += '*';
 }
 for (let imprimeIndex = 0; imprimeIndex < n; imprimeIndex += 1){
   console.log(square);
