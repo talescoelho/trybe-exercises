@@ -51,11 +51,12 @@
       Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
       Crie uma função que exiba o conteúdo de todas as tags <p> no console.
       */
-      function changeTagText(tag) {
+      function changeTagText(tag, text) {
         let tagP = document.getElementsByTagName(tag);
-        tagP[0].innerText = 'me vejo 2 anos mais velho.';
+        tagP[0].innerText = text;
       }
-      changeTagText('p');
+      changeTagText('p', 'me vejo 2 anos mais velho.');
+      changeTagText('h1', 'Exercício 5.1 - JavaScripit')
 
       function changeBackgroundColor(className, newColor) {
         let classN = document.getElementsByClassName(className);
