@@ -57,12 +57,15 @@
       }
       changeTagText('p');
 
-      function changeBackgroundColor(className) {
+      function changeBackgroundColor(className, newColor) {
         let classN = document.getElementsByClassName(className);
-        classN[0].style.backgroundColor = 'rgb(76,164,109)';
+        classN[0].style.backgroundColor = newColor;
       }
-      changeBackgroundColor('main-content')
+      changeBackgroundColor('main-content', 'rgb(76,164,109)');
+      changeBackgroundColor('center-content', 'white');
       
+
+
     </script>
   </body>
 </html>
