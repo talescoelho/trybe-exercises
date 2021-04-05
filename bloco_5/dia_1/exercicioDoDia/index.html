@@ -52,21 +52,34 @@
       Crie uma função que exiba o conteúdo de todas as tags <p> no console.
       */
       function changeTagText(tag, text) {
-        let tagP = document.getElementsByTagName(tag);
-        tagP[0].innerText = text;
+        let tagName = document.getElementsByTagName(tag);
+        tagName[0].innerText = text;
       }
       changeTagText('p', 'me vejo 2 anos mais velho.');
       changeTagText('h1', 'Exercício 5.1 - JavaScripit')
 
-      function changeBackgroundColor(className, newColor) {
+      function changeClassBackgroundColor(className, newColor) {
         let classN = document.getElementsByClassName(className);
         classN[0].style.backgroundColor = newColor;
       }
-      changeBackgroundColor('main-content', 'rgb(76,164,109)');
-      changeBackgroundColor('center-content', 'white');
+      changeClassBackgroundColor('main-content', 'rgb(76,164,109)');
+      changeClassBackgroundColor('center-content', 'white');
       
+      function chageTagTextUpperCase(tag) {
+        let tagName = document.getElementsByTagName(tag);
+        for (let index = 0; index < tagName.length; index += 1) {
+          tagName[index].innerText = tagName[index].innerText.toUpperCase();
+        }
+      }
+      chageTagTextUpperCase('p');
 
-
+      function showInConsole(tag) {
+        let tagName = document.getElementsByTagName(tag);
+        for (let index = 0; index < tagName.length; index += 1) {
+          console.log(tagName[index]);
+        }
+      }
+      showInConsole('p');
     </script>
   </body>
 </html>
