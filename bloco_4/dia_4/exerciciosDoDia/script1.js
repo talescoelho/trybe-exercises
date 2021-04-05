@@ -55,8 +55,13 @@ info2 = {
 };
 
 for (let key in info) {
-  if(info[key] === 'sim' && info2[key] === 'sim') {
-    console.log('Ambos recorrentes');
+  if(key === 'recorrente') {
+    if (info[key] === 'sim' && info2[key] === 'sim'){
+      console.log('Ambos recorrentes');
+    }
+    else {
+      console.log('Não são recorrentes');
+    }
   }
   else {
     console.log(info[key] + ' e ' + info2[key]);;
