@@ -20,10 +20,14 @@
       </div>
     </div>
     <script>
-      document.getElementById('elementoOndeVoceEsta');
-      document.getElementById('elementoOndeVoceEsta').parentElement.style.color = 'yellow';
-      document.getElementById('elementoOndeVoceEsta').childElementCount;
-      document.getElementById('elementoOndeVoceEsta').parentElement;
+      let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+      elementoOndeVoceEsta.parentElement.style.color = 'yellow';
+      elementoOndeVoceEsta.firstElementChild;
+      elementoOndeVoceEsta.parentElement;
+      elementoOndeVoceEsta.parentElement.firstElementChild.nextElementSibling.nextElementSibling;
+
+      let irmaoDoElementoOndeVoceEsta = document.createElement('div')
+      elementoOndeVoceEsta.parentElement.appendChild(irmaoDoElementoOndeVoceEsta);
     </script>
   </body>
 </html>
