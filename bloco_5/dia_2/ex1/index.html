@@ -36,6 +36,7 @@
       elementoOndeVoceEsta.firstElementChild.firstElementChild.appendChild(document.createElement('div'));
 
       let totalFilhosPai = document.getElementById('pai').children.length;
+      
       let pai = document.getElementById('pai');
       
       let voceEstaTotalFilhos = elementoOndeVoceEsta.childElementCount;
@@ -58,6 +59,14 @@
       document.body.appendChild(pai);
       pai.appendChild(elementoOndeVoceEsta);
       pai.appendChild(primeiroFilho);
+
+      let deletar = document.querySelectorAll('div');
+      for (let index = 0; index < totalFilhosPai; index++) {
+        document.getElementById('pai').removeChild(deletar);
+      }
+
+      elementoOndeVoceEsta.firstElementChild.style.color = 'green';
+>>>>>>> c2df89dd2f2ca8fbf8cb5749f8c559928baf354c
     </script>
   </body>
 </html>
