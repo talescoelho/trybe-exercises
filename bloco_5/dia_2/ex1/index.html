@@ -35,6 +35,12 @@
       //filho do primeiro filho do filho do filho
       elementoOndeVoceEsta.firstElementChild.firstElementChild.appendChild(document.createElement('div'));
 
+      let totalFilhosPai = document.getElementById('pai').children.length;
+      let deletar = document.querySelectorAll('div');
+      for (let index = 0; index < totalFilhosPai; index++) {
+        document.getElementById('pai').removeChild(deletar);
+        
+      }
     </script>
   </body>
 </html>
