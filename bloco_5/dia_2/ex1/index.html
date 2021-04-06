@@ -26,8 +26,11 @@
       elementoOndeVoceEsta.parentElement;
       elementoOndeVoceEsta.parentElement.firstElementChild.nextElementSibling.nextElementSibling;
 
-      let irmaoDoElementoOndeVoceEsta = document.createElement('div')
-      elementoOndeVoceEsta.parentElement.appendChild(irmaoDoElementoOndeVoceEsta);
+      let novaDiv = document.createElement('div')
+      //irmão do onde voce está
+      elementoOndeVoceEsta.parentElement.appendChild(novaDiv);
+      //filho do onde você está
+      elementoOndeVoceEsta.appendChild(novaDiv);
     </script>
   </body>
 </html>
