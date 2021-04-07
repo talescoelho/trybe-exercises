@@ -22,16 +22,52 @@
     <script>
       let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
       elementoOndeVoceEsta.parentElement.style.color = 'yellow';
+      elementoOndeVoceEsta.firstElementChild;
+      elementoOndeVoceEsta.parentElement;
+      elementoOndeVoceEsta.parentElement.firstElementChild.nextElementSibling.nextElementSibling;
+
+      //irmão do onde voce está
+      elementoOndeVoceEsta.parentElement.appendChild(document.createElement('div'));
+      //filho do onde você está
+      elementoOndeVoceEsta.appendChild(document.createElement('div'));
+      //filho do primeiro filho do filho
+      elementoOndeVoceEsta.firstElementChild.appendChild(document.createElement('div'));
+      //filho do primeiro filho do filho do filho
+      elementoOndeVoceEsta.firstElementChild.firstElementChild.appendChild(document.createElement('div'));
+
+      let totalFilhosPai = document.getElementById('pai').children.length;
+      
+      let pai = document.getElementById('pai');
+      
+      let voceEstaTotalFilhos = elementoOndeVoceEsta.childElementCount;
+      for (let index = 0; index < voceEstaTotalFilhos; index += 1) {
+        elementoOndeVoceEsta.removeChild(elementoOndeVoceEsta.firstElementChild);
+      }
+      elementoOndeVoceEsta = pai.removeChild(elementoOndeVoceEsta);
+      let primeiroFilho = document.getElementById('primeiroFilho');
+      primeiroFilho = pai.removeChild(primeiroFilho);
+
+      let paiTotalFilhos = pai.childElementCount;
+      console.log(paiTotalFilhos);
+      for (let index = 0; index < paiTotalFilhos; index += 1) {
+        pai.removeChild(pai.firstElementChild);
+      }
+
+      let paiDoPai = document.getElementById('paiDoPai');
+      pai = paiDoPai.removeChild(pai);
+      document.body.removeChild(paiDoPai);
+      document.body.appendChild(pai);
+      pai.appendChild(elementoOndeVoceEsta);
+      pai.appendChild(primeiroFilho);
+
+      let deletar = document.querySelectorAll('div');
+      for (let index = 0; index < totalFilhosPai; index++) {
+        document.getElementById('pai').removeChild(deletar);
+      }
+
       elementoOndeVoceEsta.firstElementChild.style.color = 'green';
+>>>>>>> c2df89dd2f2ca8fbf8cb5749f8c559928baf354c
     </script>
   </body>
 </html>
 
-<!-- Acesse o elemento elementoOndeVoceEsta .
-Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-Acesse o primeiroFilho a partir de pai .
-Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
-Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
-Agora acesse o terceiroFilho a partir de pai . -->
