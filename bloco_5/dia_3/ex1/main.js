@@ -27,11 +27,20 @@ function changeTextTechClass() {
   }
 }
 input.addEventListener('keyup', changeTextTechClass)
-// Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-//redirecione para alguma página;
+// Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele redirecione para alguma página;
 //1. Que tal redirecionar para seu portifólio?
+function doubleClickRedirect(event) {
+  window.open("https://talescoelho.github.io/");
+}
+mySpotrybefy.addEventListener('dblclick', doubleClickRedirect);
+
 //Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 //a cor do mesmo;
+function alertColor(event) {
+  let fontColor = ['white', 'green', 'red', 'blue'];
+  event.target.style.color = fontColor[Math.ceil(Math.random()*3)];
+}
+mySpotrybefy.addEventListener('mouseover', alertColor);
 
 //Segue abaixo um exemplo do uso de event.target:
 
