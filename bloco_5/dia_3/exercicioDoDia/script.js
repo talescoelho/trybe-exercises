@@ -111,7 +111,7 @@ buttonFriday.addEventListener('click', function () {
 // Dica - Propriedade: event.target .
 const daysId = document.getElementById('days');
 function zoomIn(event) {
-  event.target.style.fontSize = '30px';
+  event.target.style.fontSize = '25px';
 }
 
 function zoomOut(event) {
@@ -173,10 +173,12 @@ myTask.addEventListener('click', function (event) {
 let diasMes = document.getElementById('days');
 diasMes.addEventListener('click', function (event) {
   let colorProject = document.querySelector('.selected');
-  if (event.target.style.color === colorProject) {
-    event.target.style.color = 'rgb(119,119,119)';
-  } else {
-    event.target.style.color = colorProject.style.backgroundColor;
+  if (colorProject) {
+    if (event.target.style.color === colorProject.style.backgroundColor) {
+      event.target.style.color = 'rgb(119,119,119)';
+    } else {
+      event.target.style.color = colorProject.style.backgroundColor;
+    }
   }
 });
 
