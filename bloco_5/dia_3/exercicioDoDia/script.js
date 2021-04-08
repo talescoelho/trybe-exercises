@@ -49,7 +49,7 @@ function createDays() {
     days[index] = document.createElement('li');
     day.appendChild(days[index]);
     days[index].innerText = dezDaysList[index];
-    days[index].className = checkDay(index-1);
+    days[index].className = checkDay(index - 1);
   }
 }
 createDays();
@@ -70,16 +70,15 @@ createButton('Feriados', 'btn-holiday');
 // Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 const buttonHoliday = document.getElementById('btn-holiday');
-buttonHoliday.addEventListener('click', function(){
+buttonHoliday.addEventListener('click', function () {
   let holiday = document.querySelectorAll('.holiday');
   let color = 'white';
   for (let index = 0; index < holiday.length; index += 1) {
-    if(holiday[index].style.backgroundColor === color) {
+    if (holiday[index].style.backgroundColor === color) {
       holiday[index].style.backgroundColor = 'rgb(238,238,238)';
     } else {
       holiday[index].style.backgroundColor = color;
     }
-    
   }
 });
 
@@ -93,12 +92,12 @@ createButton('Sexta-feira', 'btn-friday');
 // Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 const buttonFriday = document.getElementById('btn-friday');
-buttonFriday.addEventListener('click', function(){
+buttonFriday.addEventListener('click', function () {
   let days = ['4', '11', '18', '25'];
   let sextou = 'Sexta-feira';
   let friday = document.querySelectorAll('.friday');
   for (let index = 0; index < days.length; index++) {
-    if(friday[index].innerText === sextou) {
+    if (friday[index].innerText === sextou) {
       friday[index].innerText = days[index];
     }
     else {
@@ -128,7 +127,7 @@ function addTasks(myTask) {
   let tagTask = document.createElement('span');
   tagTask.innerText = myTask;
   document.querySelector('.my-tasks').appendChild(tagTask);
-} 
+}
 let task = 'Estudar: ';
 addTasks(task);
 
@@ -141,7 +140,7 @@ function addColorTag(colorName) {
   tagCor.className = 'task';
   tagCor.style.backgroundColor = colorName;
   document.querySelector('.my-tasks').appendChild(tagCor);
-} 
+}
 let colorProject = 'green';
 addColorTag(colorProject);
 
@@ -149,7 +148,7 @@ addColorTag(colorProject);
 // Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 // Ao clicar novamente no elemento a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 const myTask = document.querySelector('.my-tasks');
-myTask.addEventListener('click', function(event) {
+myTask.addEventListener('click', function (event) {
   if (event.target.className === 'selected') {
     event.target.className = '';
   } else {
@@ -161,7 +160,7 @@ myTask.addEventListener('click', function(event) {
 // Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 // Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
 let diasMes = document.getElementById('days');
-diasMes.addEventListener('click', function(event){
+diasMes.addEventListener('click', function (event) {
   if (event.target.style.color === colorProject) {
     event.target.style.color = 'rgb(119,119,119)';
   } else {
