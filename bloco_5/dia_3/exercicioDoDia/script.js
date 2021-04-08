@@ -146,8 +146,18 @@ for (const key in task) {
     tagCor.style.backgroundColor = colorName;
     document.querySelector('.my-tasks').appendChild(tagCor);
   }
-  randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-  let colorProject = randomColor;
+  let rgb = [0,0,0];
+  for (let index = 0; index < key; index += 1) {
+    if (index < 3) {
+      rgb = [0,0,0];
+      rgb[index] = 255;
+    } else {
+      rgb[index-2] = 0;
+      rgb[index-3] = 255;
+    }
+  }
+  let randColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+  let colorProject = randColor;
   addColorTag(colorProject);
 }
 
@@ -157,17 +167,19 @@ for (const key in task) {
 const myTask = document.querySelector('.my-tasks');
 myTask.addEventListener('click', function (event) {
   let myTaskDiv = myTask.getElementsByTagName('div');
-  for (let index = 0; index < myTaskDiv.length; index++) {
-    if (event.target.className === 'task selected') {
-    } else {
-      myTaskDiv[index].className = 'task';
+  if(event.target.className) {
+    for (let index = 0; index < myTaskDiv.length; index++) {
+      if (event.target.className === 'task selected') {
+      } else {
+        myTaskDiv[index].className = 'task';
+      }
     }
-  }
-  if (event.target.className === 'task selected') {
-    event.target.className = 'task';
-  }else if (event.target.className !== 'task') {
-  } else {
-    event.target.className = 'task selected';
+    if (event.target.className === 'task selected') {
+      event.target.className = 'task';
+    }else if (event.target.className !== 'task') {
+    } else {
+      event.target.className = 'task selected';
+    }
   }
 });
 
