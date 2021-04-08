@@ -125,34 +125,45 @@ daysId.addEventListener('mouseout', zoomOut);
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 function addTasks(myTask) {
   let tagTask = document.createElement('span');
-  tagTask.innerText = myTask;
+  tagTask.innerText = `\n${myTask}`;
   document.querySelector('.my-tasks').appendChild(tagTask);
 }
-let task = 'Estudar: ';
-addTasks(task);
+let task = ['Estudar: ', 'Desenhar: ', 'Vagabundar: '];
 
 // Exercício 8:
 // Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
 // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
-function addColorTag(colorName) {
-  let tagCor = document.createElement('div');
-  tagCor.className = 'task';
-  tagCor.style.backgroundColor = colorName;
-  document.querySelector('.my-tasks').appendChild(tagCor);
+for (const key in task) {
+  addTasks(task[key]);
+  function addColorTag(colorName) {
+    let tagCor = document.createElement('div');
+    tagCor.className = 'task';
+    tagCor.style.backgroundColor = colorName;
+    document.querySelector('.my-tasks').appendChild(tagCor);
+  }
+  randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+  let colorProject = randomColor;
+  addColorTag(colorProject);
 }
-let colorProject = 'green';
-addColorTag(colorProject);
 
 // Exercício 9:
 // Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 // Ao clicar novamente no elemento a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 const myTask = document.querySelector('.my-tasks');
 myTask.addEventListener('click', function (event) {
-  if (event.target.className === 'selected') {
-    event.target.className = '';
+  let myTaskDiv = myTask.getElementsByTagName('div');
+  for (let index = 0; index < myTaskDiv.length; index++) {
+    if (event.target.className === 'task selected') {
+    } else {
+      myTaskDiv[index].className = 'task';
+    }
+  }
+  if (event.target.className === 'task selected') {
+    event.target.className = 'task';
+  }else if (event.target.className !== 'task') {
   } else {
-    event.target.className = 'selected';
+    event.target.className = 'task selected';
   }
 });
 
@@ -161,12 +172,13 @@ myTask.addEventListener('click', function (event) {
 // Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
 let diasMes = document.getElementById('days');
 diasMes.addEventListener('click', function (event) {
+  let colorProject = document.querySelector('.selected');
   if (event.target.style.color === colorProject) {
     event.target.style.color = 'rgb(119,119,119)';
   } else {
-    event.target.style.color = colorProject;
+    event.target.style.color = colorProject.style.backgroundColor;
   }
-})
+});
 
 // Bônus:
 // Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
