@@ -93,10 +93,14 @@ createButton('Sexta-feira', 'btn-friday');
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 const buttonFriday = document.getElementById('btn-friday');
 buttonFriday.addEventListener('click', function () {
-  let days = ['4', '11', '18', '25'];
+  let days = [];
   let sextou = 'Sexta-feira';
   let friday = document.querySelectorAll('.friday');
-  for (let index = 0; index < days.length; index++) {
+  for (let index = 0; index < friday.length; index++) {
+    days[index] = parseInt(friday[index].nextElementSibling.innerText) -1;
+    if(days[index] > parseInt(friday[index].nextElementSibling.innerText) -1) {
+      days[index] = parseInt(friday[index].previousElementSibling.innerText) +1;
+    }
     if (friday[index].innerText === sextou) {
       friday[index].innerText = days[index];
     }
