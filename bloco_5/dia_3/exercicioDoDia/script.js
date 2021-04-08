@@ -194,7 +194,18 @@ function apointment() {
     document.querySelector('.task-list').appendChild(tagSpan);
     tagSpan.innerText = `\n${tagInput.value}`;
   }
+  else {
+    alert('Favor inserir algum compromisso');
+  }
   tagInput.value = '';
 }
 const addTask = document.getElementById('btn-add');
 addTask.addEventListener('click', apointment);
+function pressEnter(event) {
+  let enter = event.keyCode;
+  if (enter === 13) {  
+    apointment();
+  }
+}
+let inputTag = document.querySelector('input');
+inputTag.addEventListener('keypress', pressEnter);
