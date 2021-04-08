@@ -128,7 +128,7 @@ function addTasks(myTask) {
   tagTask.innerText = `\n${myTask}`;
   document.querySelector('.my-tasks').appendChild(tagTask);
 }
-let task = ['Estudar: ', 'Desenhar: ', 'Vagabundar: '];
+let task = ['Estudar:'];
 
 // Exercício 8:
 // Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
