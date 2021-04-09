@@ -19,8 +19,11 @@ window.onload = function() {
   const bodyTag = document.body;
   
   bodyTag.style.fontSize = localStorage.fontSize;
-  bodyTag.style.bgColor = localStorage.bgColor;
-  bodyTag.style.pPadding = localStorage.pPadding;
+  bodyTag.style.backgroundColor = localStorage.bgColor;
+  for (let index = 0; index < document.querySelectorAll('p').length; index += 1) {
+    console.log(index);
+    bodyTag.querySelectorAll('p')[index].style.paddingBottom = localStorage.pPadding;;
+  }
   bodyTag.style.fontColor = localStorage.fontColor;
   bodyTag.style.fontFamily = localStorage.fontFamily;
 
@@ -58,29 +61,41 @@ window.onload = function() {
 
   fontEUp.addEventListener('click', function() {
     if (parseInt(localStorage.pPadding) < 40) {
-      bodyTag.querySelectorAll('p').forEach().style.paddingBottom = `${parseInt(localStorage.pPadding)+5}px`;
+      for (let index = 0; index < document.querySelectorAll('p').length; index += 1) {
+        console.log(index);
+        bodyTag.querySelectorAll('p')[index].style.paddingBottom = `${parseInt(localStorage.pPadding)+5}px`;
+      }
       localStorage.pPadding = `${parseInt(localStorage.pPadding)+5}px`;
     }
   });
 
   fontEDown.addEventListener('click', function() {
     if (parseInt(localStorage.pPadding) > 0) {
-      bodyTag.querySelectorAll('p').forEach().style.paddingBottom = `${parseInt(localStorage.pPadding)-5}px`;
+      for (let index = 0; index < document.querySelectorAll('p').length; index += 1) {
+        console.log(index);
+        bodyTag.querySelectorAll('p')[index].style.paddingBottom = `${parseInt(localStorage.pPadding)-5}px`;
+      }
       localStorage.pPadding = `${parseInt(localStorage.pPadding)-5}px`;
     }
   });
 
   colorFont.addEventListener('click', function() {
-    
+    if (bodyTag.style.color === 'red') {
+      bodyTag.style.color = 'black';
+      localStorage.fontColor = 'black';
+    } else {
+      bodyTag.style.color = 'red';
+      localStorage.fontColor = 'red';
+    }
   });
 
   colorBackground.addEventListener('click', function() {
-    
+    if (bodyTag.style.backgroundColor === 'blue') {
+      bodyTag.style.backgroundColor = 'white';
+      localStorage.bgColor = 'white';
+    } else {
+      bodyTag.style.backgroundColor = 'blue';
+      localStorage.bgColor = 'blue';
+    }
   });
-
-  headeSection.addEventListener('click', function() {
-    
-  });
-  
-
 }
