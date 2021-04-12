@@ -1,0 +1,31 @@
+.inline-block {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+body {
+  font-size: 16px;
+  background-color: white;
+  font-family: Verdana;
+  color: black;
+}
+
+p {
+  padding-bottom: 0px;
+}
+
+.color-change-font {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.color-change-background {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+}
