@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Office</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="header" class="width-content">
+    <h1>Inscrição para trabalho Home Office</h1>
+    <p>Por favor insira seus dados</p>
+  </header>
+  <main id="main" class="width-content">
+    <section id="main-section">
+      <form action="" method="get" id="form">
+        <fieldset id="upper-content" class="container">
+          <label for="input-nome">
+            Nome: <input type="text" maxlength="40" name="nome" id="input-nome" placeholder="Nome completo" required>
+          </label>
+
+          <label for="input-email">
+            Email: <input type="text" maxlength="50" name="email" id="input-email" placeholder="exemple@ex.com.br" required>
+          </label>
+          
+          <label for="input-cpf">
+            CPF: <input type="text" maxlength="11" name="cpf" id="input-cpf" placeholder="Somente Números" autocomplete="off" required>
+          </label>
+
+          <label for="input-address">
+            Endereço: <input type="text" maxlength="200" name="address" id="input-address" placeholder="Digite o endereço completo" required>
+          </label>
+    
+          <label for="input-city">
+            Cidade: <input type="text" maxlength="28" name="city" id="input-city" placeholder="Digite sua cidade" required>
+          </label>
+
+          <label for="select-state">
+            Estado: <select name="state" id="select-state" required>
+            </select>
+          </label>
+
+          <label for="radio-home">
+            <input type="radio" name="home" id="radio-home" value="Casa" checked required> Casa
+          </label>
+
+          <label for="radio-apartment">
+            <input type="radio" name="home" value="Apartamento" id="radio-apartment"> Apartamento
+          </label>
+        </fieldset>
+    
+        <fieldset id="center-content" class="container">
+          <div class="center-container">
+            <label for="text-area-curriculum">
+              Resumo do currículo: 
+              <br>
+              <textarea name="curriculum" id="text-area-curriculum" cols="40" rows="11" maxlength="1000" placeholder="Digite sobre suas experiências" required></textarea>
+            </label>
+          </div>
+
+          <div class="center-container">
+            <label for="input-office">
+              Cargo: <input type="text" name="office" id="input-office" maxlength="40" placeholder="Digite o cargo desejado" required>
+            </label>
+      
+            <label for="text-area-cargo">
+              <br> Resumo do cargo: <br>
+              <textarea name="cargo" id="text-area-cargo" cols="40" rows="10" maxlength="500" placeholder="Digite sobre o cargo" required></textarea>
+            </label>
+          </div>
+
+          <div class="center-container">
+            <label for="input-date">
+              Data de início: 
+              <input type="text" name="input-date" id="input-date" placeholder="Digite uma data" required>
+            </label>
+          </div>
+        </fieldset>
+    
+        <div id="botton-content" class="container">
+          <button type="submit" id="button-form">Enviar</button> <button type="reset">Limpar</button> <button type="reset" id="limpar-tudo">Limpar Tudo</button>
+        </div> 
+      </form>
+    </section>
+  </main>
+  <div id="insert-form" class="width-content">
+  </div>
+  <script src="bloco_6/dia-1/exercicio-do-dia/node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
