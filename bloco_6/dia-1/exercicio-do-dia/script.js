@@ -291,9 +291,27 @@ function checkSecondFieldFunctions() {
   return true;
 }
 
+const insertForm = document.getElementById('insert-form');
 // Botão de validação
 buttonForm.addEventListener('click', (event) => {
-  if (!checkFirstFieldFunctions() && !checkSecondFieldFunctions()) {
-    event.preventDefault();
+  insertForm.innerHTML = '';
+  event.preventDefault();
+  if (checkFirstFieldFunctions() && checkSecondFieldFunctions()) {
+    const form = document.getElementById('form');
+    const formData = new FormData(form);
+    for(var pair of formData.entries()) {
+      const newDiv = document.createElement('div');
+      newDiv.innerHTML = `<span class="left-content">${pair[0]}: </span><span class="right-content">${pair[1]}</span>`;
+      sessionStorage.setItem(pair[0], pair[1]);
+      newDiv.className = 'insert-content';
+      insertForm.appendChild(newDiv);
+      console.log(pair[0]+ ', '+ pair[1]);
+    }
   }
+  
 });
+
+const limparTudo = document.getElementById('limpar-tudo');
+limparTudo.addEventListener('click', () => {
+  insertForm.innerHTML = '';
+})

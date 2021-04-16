@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: inline-block;
+  min-width: 700px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.width-content {
+  width: 900px;
+  border: 1px solid red;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center-container {
+  display: inline-block;
+  text-align: left;
+}
+
+textarea {
+  resize: none;
+}
+
+.left-content {
+  display: inline-block;
+  width: 45%;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.right-content {
+  display: inline-block;
+  width: 45%;
+  text-align: left;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.insert-content {
+  border: 1px solid red;
+}
