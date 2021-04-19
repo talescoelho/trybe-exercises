@@ -16,10 +16,10 @@
     <h1 class="card-title">Cadastro</h1>
   </header>
   <main id="main" class="mt-2 mb-2 p-3 border rounded bg-light bg-gradient">
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation" id="my-form" novalidate>
       <div class="col-md-4">
         <label for="input-name" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="input-name" required>
+        <input type="text" class="form-control" name="nome" id="input-name" required>
       </div>
 
       <!-- email -->
@@ -29,30 +29,29 @@
           <label class="input-group-text" id="basic-addon1">
             <i class="bi bi-envelope"></i>
           </label>
-          <input type="email" class="form-control validate" name="email" id="email" 
-          data-validate="required,email" required>
+          <input type="email" class="form-control validate " name="email" id="email" required>
         </div>
       </div>
       <!-- email -->
 
-      <div class="col-md-4  ">
-        <label for="inputCpf" class="form-label">Cpf</label>
-        <input type="text" class="form-control" id="inputCpf" required>
+      <div class="col-md-4">
+        <label for="input-cpf" class="form-label">Cpf</label>
+        <input type="text" class="form-control" name="cpf" id="input-cpf" required>
       </div>
 
       <div class="col-12">
         <label for="inputAddress" class="form-label">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress" required>
+        <input type="text" class="form-control" name="endereco" id="inputAddress" required>
       </div>
 
       <div class="col-md-4">
         <label for="inputCity" class="form-label">Cidade</label>
-        <input type="text" class="form-control" id="inputCity" required>
+        <input type="text" class="form-control" name="cidade" id="inputCity" required>
       </div>
 
       <div class="col-md-4">
         <label for="select-state" class="form-label">Estado</label>
-        <select id="select-state" class="form-select" required>
+        <select id="select-state" name="estado" class="form-select" required>
           <option value="">Estados</option>
         </select>
       </div>
@@ -60,41 +59,45 @@
       <div class="col-md-4">
         <label  class="form-label">Residência</label>
         <div class="form-check">
-          <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+          <input type="radio" class="form-check-input" id="validationFormCheck2" value="Casa" name="residencia" required>
           <label class="form-check-label" for="validationFormCheck2">Casa</label>
         </div>
         <div class="form-check mb-3">
-          <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+          <input type="radio" class="form-check-input" id="validationFormCheck3" value="Apartamento" name="residencia" required>
           <label class="form-check-label" for="validationFormCheck3">Apartamento</label>
         </div>
       </div>
 
       <div class="col-12">
         <label for="inputCargo" class="form-label">Resumo do Curriculum</label>
-        <textarea type="textarea" class="form-control" id="inputCargo" placeholder="Uma breve descrição sobre o curriculum" required></textarea>
+        <textarea type="textarea" class="form-control" name="resumo-curriculum" id="inputCargo" placeholder="Uma breve descrição sobre o curriculum" required></textarea>
       </div>
 
       <div class="col-md-4">
         <label for="input-city" class="form-label">Cargo</label>
-        <input type="text" class="form-control" id="input-city" required>
+        <input type="text" class="form-control" name="cargo" id="input-city" required>
       </div>
 
       <div class="col-4">
         <label for="inputCargo" class="form-label">Descrição do Cargo</label>
-        <textarea type="textarea" class="form-control" id="inputCargo" placeholder="Uma breve descrição sobre o cargo" required></textarea>
+        <textarea type="textarea" class="form-control" name="descricao-cargo" id="inputCargo" placeholder="Uma breve descrição sobre o cargo" required></textarea>
       </div>
 
       <div class="col-md-4">
         <label for="inputDate" class="form-label">Data de início</label>
-        <input type="date" class="form-control" id="inputDate" required>
+        <input type="date" class="form-control" name="date" id="inputDate" required>
       </div>
 
       <div class="col-12 btn-group" role="group" aria-label="Basic example">
-        <button type="submit" class="form__btn btn btn-primary">Enviar</button>
+        <button type="submit" class="form__btn btn btn-primary" id="submit">Enviar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>
       </div>
 
     </form>
+
+    <div id="insert-form">
+
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
