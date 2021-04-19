@@ -301,10 +301,9 @@ buttonForm.addEventListener('click', (event) => {
     const formData = new FormData(form);
     for(var pair of formData.entries()) {
       const newDiv = document.createElement('div');
-      newDiv.innerHTML = `<span class="left-content">${pair[0]}: </span><span class="right-content">${pair[1]}</span>`;
+      newDiv.innerHTML = `<span class="col-6">${pair[0]}: </span><span class="col-6">${pair[1]}</span>`;
       newDiv.className = 'insert-content';
       insertForm.appendChild(newDiv);
-      console.log(pair[0]+ ', '+ pair[1]);
     }
   }
   
