@@ -39,3 +39,9 @@ figure {
     flex-wrap: wrap;
   }
 }
+
+@media (min-width: 1300px) {
+  body {
+    background-color: rgb(173, 173, 173);
+  }
+}
