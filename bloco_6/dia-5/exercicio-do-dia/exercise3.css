@@ -101,4 +101,16 @@
   #aside {
     display: none;
   }
+  body {
+    padding: 0;
+  }
+  #navigation ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #navigation li a {
+    display: flex;
+    flex-direction: column;
+    border-right: none;
+  }
 }
