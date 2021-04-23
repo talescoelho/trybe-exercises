@@ -96,3 +96,9 @@
     float: none;
   }
 }
+
+@media screen and (max-width: 700px) {
+  #aside {
+    display: none;
+  }
+}
