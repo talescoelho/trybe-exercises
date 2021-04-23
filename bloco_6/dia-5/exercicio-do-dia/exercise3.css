@@ -85,4 +85,14 @@
   #header, #navigation, footer {
     display: none;
   }
+  #content {
+    float: none;
+  }
+  #aside {
+    float: none;
+    display: block;
+  }
+  #footer {
+    float: none;
+  }
 }
