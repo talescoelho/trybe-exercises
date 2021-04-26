@@ -37,5 +37,9 @@
 // Retorno: "Tryber Bebeto aqui!"
 // Um array com escopo global, que é o escopo do arquivo JS , nesse caso, contendo cinco strings com suas principais skills .
 
-const removeX = (string, arr) => `Tryber ${string} aqui!\n${arr.sort().join(';\n')};\n#goTrybe `;
-console.log(removeX('Tales', ['HTML', 'CSS', 'JS', 'Lógica', 'C']));
+const arr = ['HTML', 'CSS', 'JS', 'Lógica', 'C'];
+const string = 'Tales';
+const removeX = string => `Tryber ${string} aqui!`;
+
+const mySkylls = () => `${removeX(string)}\n${arr.sort().join(';\n')};\n#goTrybe `;
+console.log(mySkylls());
