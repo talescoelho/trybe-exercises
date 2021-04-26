@@ -1,0 +1,55 @@
+body {
+  font-size: 1.3em;
+  margin: 15px 20px;
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.8em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 680px) {
+  p {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  figcaption {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  body {
+    margin: 15px 10px;
+  }
+  #figures {
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1300px) {
+  body {
+    background-color: rgb(173, 173, 173);
+    margin: 10px 20px;
+    max-width: 1400px;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
