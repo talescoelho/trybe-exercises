@@ -25,3 +25,7 @@
 // const longestWord = (frase) => frase.split(' ').sort((a, b) => b.length - a.length)[0];
 // console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
 
+const count = document.getElementById('count');
+const totalConts = document.getElementById('total-conts');
+
+count.addEventListener('click', () => totalConts.innerText = Number(totalConts.innerText) + 1);
