@@ -25,7 +25,17 @@
 // const longestWord = (frase) => frase.split(' ').sort((a, b) => b.length - a.length)[0];
 // console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
 
-const count = document.getElementById('count');
-const totalConts = document.getElementById('total-conts');
+// Botão de contador
+// const count = document.getElementById('count');
+// const totalConts = document.getElementById('total-conts');
+// count.addEventListener('click', () => totalConts.innerText = Number(totalConts.innerText) + 1);
 
-count.addEventListener('click', () => totalConts.innerText = Number(totalConts.innerText) + 1);
+// Função 1 : Escreva uma função que vai receber uma string como parâmetro. Sua função deverá procurar pela letra x em uma string qualquer que você determinar e substituir pela string que você passou como parâmetro. Sua função deve retornar essa nova string .
+// Exemplo:
+// String determinada: "Tryber x aqui!"
+// Parâmetro: "Bebeto"
+// Retorno: "Tryber Bebeto aqui!"
+// Um array com escopo global, que é o escopo do arquivo JS , nesse caso, contendo cinco strings com suas principais skills .
+
+const removeX = (string, arr) => `Tryber ${string} aqui!\n${arr.sort().join(';\n')};\n#goTrybe `;
+console.log(removeX('Tales', ['HTML', 'CSS', 'JS', 'Lógica', 'C']));
