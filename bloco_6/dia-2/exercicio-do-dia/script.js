@@ -10,6 +10,7 @@ function calculoCpf(cpfValido, checkCpf1, checkCpf2) {
   if (checkCpf1 === cpfValido[9] && checkCpf2 === cpfValido[10] && count !== 11) {
     return true;
   } else {
+    inputCpf.value = '';
     return false;
   }
 }
@@ -30,6 +31,7 @@ function validCpf(key, inputCpf) {
 // recebe o cpf e fas o cálculo para verificar se é válido
 function checkCpf() {
   if (inputCpf.value.length < 14) {
+    inputCpf.value = '';
     return false;
   } else {
     let checkCpf1 = 0;
@@ -81,21 +83,22 @@ inputCpf.addEventListener('keypress', (event) => {
   Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+      if (!form.checkValidity() && !checkCpf()) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        const form1 = document.getElementById('my-form');
+        const formData = new FormData(form1);
+        console.log(formData.entries());
+        const insertForm = document.getElementById('insert-form');
+        for (var pair of formData.entries()) {
+          const newDiv = document.createElement('div');
+          newDiv.innerHTML = `<span class="col-6 text-end">${pair[0]}: </span><span class="col-6">${pair[1]}</span>`;
+          newDiv.className = 'row mt-3';
+          insertForm.appendChild(newDiv);
+        }
       }
-      const form1 = document.getElementById('my-form');
-      const formData = new FormData(form1);
-      console.log(formData.entries());
-      const insertForm = document.getElementById('insert-form');
-      for (var pair of formData.entries()) {
-        const newDiv = document.createElement('div');
-        newDiv.innerHTML = `<span class="col-6 text-end">${pair[0]}: </span><span class="col-6">${pair[1]}</span>`;
-        newDiv.className = 'row mt-3';
-        insertForm.appendChild(newDiv);
-      }
-      form.classList.add('was-validated')
+      form.classList.add('was-validated');
     }, false)
   })
 })()
