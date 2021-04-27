@@ -37,9 +37,13 @@
 // Retorno: "Tryber Bebeto aqui!"
 // Um array com escopo global, que é o escopo do arquivo JS , nesse caso, contendo cinco strings com suas principais skills .
 
-const arr = ['HTML', 'CSS', 'JS', 'Lógica', 'C'];
-const string = 'Tales';
-const removeX = string => `Tryber ${string} aqui!`;
+// const arr = ['HTML', 'CSS', 'JS', 'Lógica', 'C'];
+// const string = 'Tales';
+// const removeX = string => `Tryber ${string} aqui!`;
 
-const mySkylls = () => `${removeX(string)}\n${arr.sort().join(';\n')};\n#goTrybe `;
-console.log(mySkylls());
+// const mySkylls = () => `${removeX(string)}\n${arr.sort().join(';\n')};\n#goTrybe `;
+// console.log(mySkylls());
+
+const longestWord = (string) => Math.max(string.split(' ').map((e,i,a) => a[i].length));
+
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
