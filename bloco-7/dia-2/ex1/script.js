@@ -13,15 +13,12 @@ const student2 = {
   Git: 'Bom', // chave adicionada
 };
 
-const listSkills = (student) => {
-  const arrayOfSkills = Object.keys(student);
-  for(index in arrayOfSkills){
-    console.log(`${arrayOfSkills[index]}, Nível: ${student[arrayOfSkills[index]]}`);
+function showSkills(obj) {
+  for (let index in obj) {
+    console.log(`${index}, Nível: ${obj[index]}`);
   }
-};
+}
 
-console.log('Estudante 1');
-listSkills(student1);
+showSkills(student2);
 
-console.log('Estudante 2');
-listSkills(student2);
+let string = 12345;
