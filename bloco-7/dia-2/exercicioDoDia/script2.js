@@ -47,3 +47,10 @@ console.log(objAllStudents);
 // Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
 const getValueByNumber = (lesson, value) => allLessons[Object.keys(allLessons)[value]].materia;
 console.log(getValueByNumber(lesson1, 2));
+
+// Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+const verifyPair = (lesson, key, value) => lesson[key] === value ? true : false;
+// Output: true,
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: false
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
