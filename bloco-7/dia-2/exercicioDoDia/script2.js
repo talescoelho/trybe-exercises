@@ -27,3 +27,6 @@ console.log(lesson2);
 const objKeys = obj => console.log(Object.keys(obj));
 objKeys(lesson2);
 
+// Crie uma função para mostrar o tamanho de um objeto.
+const objKeysLength = obj => console.log(Object.keys(obj).length);
+objKeysLength(lesson1);
