@@ -83,7 +83,7 @@ console.log('\nExercício Bônus 2----------------------');
 // 2 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
 function createReport(allLessons, value){
   const prof = Object.keys(allLessons).map(a => allLessons[a].professor === value);
-  if (prof) {
+  if (!prof.reduce((a,b) => a+b)) {
     return `Favor verificar o nome do professor`;
   }
   const professorReport = {professor: value,};
@@ -97,4 +97,4 @@ function createReport(allLessons, value){
   }
   return professorReport;
 };
-console.log(createReport(allLessons, 'teste'));
+console.log(createReport(allLessons, 'Maria Clara'));
