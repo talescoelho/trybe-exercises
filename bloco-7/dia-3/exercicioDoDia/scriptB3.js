@@ -1,6 +1,6 @@
 // Escreva a função removeMiddle para passar nos testes já implementados.
-
 const assert = require('assert');
+
 // escreva a função removeMiddle aqui
 const removeMiddle = words => words.splice(Math.floor(words.length / 2), 1);
 
