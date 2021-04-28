@@ -58,8 +58,8 @@ console.log(`Número de alunos matriculados: ${objAllStudents}`);
 console.log('\nExercício 7----------------------');
 
 // 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
-const getValueByNumber = (lesson, value) => allLessons[Object.keys(allLessons)[value]].materia;
-console.log(getValueByNumber(lesson1, 2));
+const getValueByNumber = (lesson, value) => Object.values(lesson)[value];
+console.log(getValueByNumber(lesson1, 0));
 
 console.log('\nExercício 8----------------------');
 
@@ -83,6 +83,9 @@ console.log('\nExercício Bônus 2----------------------');
 // 2 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
 function createReport(allLessons, value){
   const prof = Object.keys(allLessons).map(a => allLessons[a].professor === value);
+  if (prof) {
+    return `Favor verificar o nome do professor`;
+  }
   const professorReport = {professor: value,};
   professorReport.aulas = [];
   professorReport.estudantes = 0;
@@ -94,10 +97,4 @@ function createReport(allLessons, value){
   }
   return professorReport;
 };
-console.log(createReport(allLessons, 'Carlos'));
-
-/* {
-  professor: 'Maria Clara',
-  aulas: [ 'Matemática', 'Matemática' ],
-  estudantes: 30
-} */
+console.log(createReport(allLessons, 'teste'));
