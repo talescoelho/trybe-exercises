@@ -1,0 +1,46 @@
+.flex {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+#dragon {
+  border: 1px solid red;
+  align-self: center;
+  width: 300px;
+  height: 300px;
+  background-image: url('dragao.jpg');
+  background-size: 100%;
+}
+#warrior {
+  border: 1px solid green;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  background-image: url('guerreiro.jpg');
+  background-size: 100%;
+}
+#mage {
+  border: 1px solid blue;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  background-image: url('mago.jpg');
+  background-size: 100%;
+}
+
+span {
+  background-color: white;
+}
+
+#dragon-attack {
+  display: inline-block;
+}
+
+#warrior-attack {
+  display: none;
+}
+
+#mage-attack {
+  display: none;
+}
