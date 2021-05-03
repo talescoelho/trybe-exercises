@@ -67,9 +67,10 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
+  let exist = true;
   const arr = [];
-  books.forEach(element => arr.find(a => a === element.author.birthYear) ? arr.push(false) : arr.push(element.author.birthYear));
-  return arr.find(element => element === false);
+  books.forEach(element => arr.find(a => a === element.author.birthYear) ? exist = false : arr.push(element.author.birthYear));
+  return exist;
 }
 
 assert.strictEqual(authorUnique(), expectedResult);
