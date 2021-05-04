@@ -67,8 +67,8 @@ const expectedResult = 'O Senhor dos Anéis';
 // Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
 function authorWith3DotsOnName() {
   // escreva seu código aqui
-  return books.map(book => book.author.name.split(' ').filter(a => a[a.length-1] === '.').join(' ').length === 8 ? book.name : false).filter(a => a != false).join();
+  return books.map(book => book.author.name.split(' ').filter(a => a[a.length-1] === '.').length === 3 ? book.name : false).filter(a => a).join();
 }
 
-// console.log(authorWith3DotsOnName())
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+console.log(authorWith3DotsOnName())
+// assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
