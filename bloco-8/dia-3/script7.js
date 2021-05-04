@@ -70,5 +70,5 @@ function authorWith3DotsOnName() {
   return books.map(book => book.author.name.split(' ').filter(a => a[a.length-1] === '.').length === 3 ? book.name : false).filter(a => a).join();
 }
 
-console.log(authorWith3DotsOnName())
-// assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+// console.log(authorWith3DotsOnName())
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
