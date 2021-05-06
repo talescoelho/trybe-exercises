@@ -6,4 +6,4 @@ console.log(saudacoes[1](saudacoes[0])); // Olá
 
 const [el1, el2] = saudacoes;
 
-console.log(el1, (el2[0]));
+console.log(el2(el1));
