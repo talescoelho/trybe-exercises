@@ -1,11 +1,6 @@
 const createMyPromise = () => {
-  let arrRandNumber = [];
-  for (let index = 0; index < 10; index++) {
-    let randNumber = Math.round(Math.random() * 50);
-    arrRandNumber.push(randNumber ** 2);
-  }
+  let arrRandNumber = Array.from({length: 10}, () => Math.round(Math.random() * 50) ** 2)
   const sum = arrRandNumber.reduce((acc, value) => acc + value);
-
   if (sum >= 8000) {
     throw new Error();
   }
