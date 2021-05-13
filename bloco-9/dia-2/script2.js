@@ -10,8 +10,8 @@ const createMyPromise = () => {
   });
   myPromise
     .then((sum) => [2, 3, 5, 10].map((value) => sum / value))
-    .then((arrNumber) => console.log(arrNumber))
-    .catch(() => console.log('Promise rejeitada'));
+    .then((arrNumber) => console.log(arrNumber.reduce((acc, value) => acc + value)))
+    .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
 }
 
 createMyPromise();
