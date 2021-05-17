@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Pokemons</h1></header>
-  <main>
-    <section id="list-pokemons">
-    </section>
-    <button id="previous">previous</button> <span>Page: </span><span id="num-page">0</span> <button id="next">next</button>
+  <header id="header">
+    <h1>Pokemons</h1> <button id="previous">previous</button> <span>Page: </span><span id="num-page">0</span> <button id="next">next</button>
+  </header>
+  <main id="main">
+    <div id="div-main">
+      <section id="list-pokemons">
+      </section>
+      <section id="pokemon-preview"></section>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
