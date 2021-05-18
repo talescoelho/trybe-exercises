@@ -100,9 +100,6 @@ const pokemonPreview = (url) => {
       pokemonDiv.appendChild(pokemonImage);
       pokemonDiv.appendChild(pokemonStatus);
       pokemonDiv.appendChild(myChart);
-
-      //http://www.chartjs.org/docs/#doughnut-pie-chart-introduction
-      //new Chart(ctx).Doughnut(data);
     })
 }
 

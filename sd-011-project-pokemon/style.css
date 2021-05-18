@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-#header {
-
-}
-
 #main {
   margin: 0 10%;
   padding: 10px;
@@ -40,7 +36,7 @@
 }
 
 #pokemon-preview {
-  width: 300px;
+  width: 200px;
   height: fit-content;
   position: -webkit-sticky;
   position: sticky;
