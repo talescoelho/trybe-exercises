@@ -59,3 +59,31 @@
   padding: 3px;
   margin: 1px;
 }
+
+#myChart {
+  align-self: center;
+}
+
+.hp {
+  color: #F64225;
+}
+
+.attack {
+  color: #F08030;
+}
+
+.defense {
+  color: #F8D030;
+}
+
+.special-attack {
+  color: #6890F0;
+}
+
+.special-defense {
+  color: #78C850;
+}
+
+.speed {
+  color: #F55788;
+}
