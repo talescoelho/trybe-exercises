@@ -4,7 +4,7 @@
 }
 
 #header {
-  
+
 }
 
 #main {
@@ -31,7 +31,7 @@
 #list-pokemons {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  max-width: 600px;
 }
 
 #list-pokemons .pokemon-card:hover {
@@ -45,8 +45,9 @@
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  position: absolute;
 }
 
-/* #pokemon-preview {
-  background: linear-gradient(#78C850, #544878);
-} */
+#pokemon-preview {
+  position: relative;
+}
