@@ -51,3 +51,11 @@
 #pokemon-preview {
   position: relative;
 }
+
+.move {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 1px;
+}

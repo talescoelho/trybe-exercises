@@ -25,7 +25,7 @@ const pokemonPreview = (url) => {
   fetch(url)
   .then((result) => result.json())
   .then((pokemon) => {
-    // console.log(pokemon)
+    console.log(pokemon)
     const pokemonDiv = document.createElement('div');
     pokemonDiv.className = 'pokemon-card';
 
@@ -38,9 +38,13 @@ const pokemonPreview = (url) => {
     pokemonDiv.style.background = `linear-gradient(45deg, ${color[0]}, white, ${color[1]})`;
 
     const pokemonName = document.createElement('span');
-    pokemonName.innerHTML = `<span>${pokemon.name}</span> <span>${pokemon.id}</span>`;
+    pokemonName.innerHTML = `<span>${pokemon.name.split('').map((v, i, arr) => i === 0 ? arr[0].toUpperCase() : v).join('')}</span> <span>${pokemon.id}</span>`;
     const pokemonType = document.createElement('span');
-    pokemonType.innerText = pokemon.types.map(({type}) => ` ${type.name}`);
+    const moves = []
+    for (let index = 0; index < 4; index++) {
+      moves.push(pokemon.moves[Math.ceil(Math.random() * pokemon.moves.length - 1)].move.name)
+    }
+    pokemonType.innerHTML = `<span class="move">${moves[0]}</span> <span class="move">${moves[1]}</span></br><span class="move">${moves[2]}</span> <span class="move">${moves[3]}</span>`;
     const pokemonImage = document.createElement('img');
     pokemonImage.src = `${pokemon.sprites.front_default}`;
 
@@ -71,7 +75,7 @@ const createPokemon = ({ name, id, types, sprites }) => {
   pokemonDiv.addEventListener('click', () => pokemonPreview(url));
 
   const pokemonName = document.createElement('span');
-  pokemonName.innerHTML = `<span>${name}</span> <span>${id}</span>`;
+  pokemonName.innerHTML = `<span>${name.split('').map((v, i, arr) => i === 0 ? arr[0].toUpperCase() : v).join('')}</span> <span>${id}</span>`;
   const pokemonType = document.createElement('span');
   pokemonType.innerText = types.map(({type}) => ` ${type.name}`);
   const pokemonImage = document.createElement('img');
