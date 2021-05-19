@@ -19,6 +19,8 @@
   border: 1px solid blue;
   border-radius: 5px;
   display: flex;
+  width: 115px;
+  height: 151px;
   padding: 5px;
   flex-direction: column;
   text-align: center;
@@ -27,7 +29,7 @@
 #list-pokemons {
   display: flex;
   flex-wrap: wrap;
-  max-width: 600px;
+  width: 740px;
 }
 
 #list-pokemons .pokemon-card:hover {
