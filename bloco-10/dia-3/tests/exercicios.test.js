@@ -1,12 +1,13 @@
 // #1 Crie uma função que gere um número aleatório entre 0 e 100. Você irá criar também os testes para essa função. Utilizando o mock, defina o retorno padrão como 10. Teste se a função foi chamada, qual seu retorno e quantas vezes foi chamada.
-const { randNumber } = require('../exercicioDoDia/randNumber');
+const functionNumber = require('../exercicioDoDia/randNumber');
 
 test("#1 Crie uma função que gere um número aleatório entre 0 e 100. Você irá criar também os testes para essa função. Utilizando o mock, defina o retorno padrão como 10. Teste se a função foi chamada, qual seu retorno e quantas vezes foi chamada.", () => {
-  randNumber = jest.fn()
+  functionNumber.randNumber = jest.fn()
     .mockReturnValue(10);
-  randNumber();
-  expect(randNumber).toHaveBeenCalled();
-  expect(randNumber()).toBe(10);
+    functionNumber.randNumber();
+  expect(functionNumber.randNumber).toHaveBeenCalled();
+  expect(functionNumber.randNumber()).toBe(10);
+  expect(functionNumber.randNumber).toHaveBeenCalledTimes(2);
 });
 
 // #2 Com a mesma função do exercício anterior, utilizando o mock, crie uma nova implementação, que deve receber dois parâmetros e retornar a divisão do primeiro pelo segundo. Essa implementação deve ocorrer uma única vez. Faça os testes necessários.
