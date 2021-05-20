@@ -95,4 +95,30 @@ describe('#Exercício 4 e 5', () => {
     expect(stringFnc.concatStrings('Tales', 'Coelho')).toBe('Tales Coelho');
   });
 })
+
 // #6 Crie uma função que faça requisição para a api dog pictures . Mocke a requisição e crie dois testes. O primeiro deve interpretar que a requisição se resolveu e teve como valor "request sucess". O segundo deve interpretar que a requisição falhou e ter como valor "request failed". Crie todos os testes que achar necessário.
+const service = require('../exercicioDoDia/dogPictures')
+describe('#6 Crie uma função que faça requisição para a api dog pictures . Mocke a requisição e crie dois testes. O primeiro deve interpretar que a requisição se resolveu e teve como valor "request sucess". O segundo deve interpretar que a requisição falhou e ter como valor "request failed". Crie todos os testes que achar necessário.', () => {
+
+  test("testando requisição caso a promisse resolva", async () => {
+    const mocStringTransform = jest
+      .spyOn(service, "fetchDog")
+      .mockResolvedValue("request sucess");
+      
+    mocStringTransform();
+    expect(mocStringTransform).toHaveBeenCalled();
+    expect(mocStringTransform).toHaveBeenCalledTimes(1);
+    expect(mocStringTransform()).resolves.toBe("request sucess");
+    expect(mocStringTransform).toHaveBeenCalledTimes(2);
+  });
+
+  test("testando requisição caso a promisse seja rejeitada", async () => {
+    const mocStringTransform = jest
+      .spyOn(service, "fetchDog")
+      .mockRejectedValue("request failed");
+
+    expect(mocStringTransform).toHaveBeenCalledTimes(2);
+    expect(mocStringTransform()).rejects.toMatch("request failed");
+    expect(mocStringTransform).toHaveBeenCalledTimes(3);
+  });
+});
