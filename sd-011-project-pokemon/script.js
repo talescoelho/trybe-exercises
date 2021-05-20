@@ -76,6 +76,8 @@ const verifyClick = () => {
   setTimeout(() => {
     if (listPokemons.childElementCount < 2) {
       alert('boa');
+      alert('brabo');
+      createPokemonList(dificult.value);
     }
   }, 1000);
 }
@@ -134,9 +136,9 @@ const createPokemon = ({ name, id, types, sprites }) => {
   return pokemonDiv;
 }
 
-const createPokemonList = () => {
+const createPokemonList = (dif) => {
   const listPokemons = document.getElementById('list-pokemons');
-  let count = Array.from({ length: 10 }, () => Math.ceil(Math.random() * 151));
+  let count = Array.from({ length: dif }, () => Math.ceil(Math.random() * 151));
   // console.log(count)
   count.forEach((element) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${element}`)
@@ -148,4 +150,11 @@ const createPokemonList = () => {
   });
 }
 
-createPokemonList();
+
+const dificult = document.getElementById('dificult');
+createPokemonList(dificult.value);
+dificult.addEventListener('click', () => {
+  const listPokemons = document.getElementById('list-pokemons');
+  listPokemons.innerHTML = '';
+  createPokemonList(dificult.value);
+})

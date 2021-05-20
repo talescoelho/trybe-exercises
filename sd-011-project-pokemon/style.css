@@ -11,7 +11,7 @@
 #div-main {
   position: absolute;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .pokemon-card {
@@ -29,7 +29,7 @@
 #list-pokemons {
   display: flex;
   flex-wrap: wrap;
-  width: 740px;
+  width: 1110;
 }
 
 #list-pokemons .pokemon-card:hover {
