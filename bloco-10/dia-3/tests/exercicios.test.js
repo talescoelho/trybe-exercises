@@ -6,7 +6,7 @@ test("#1 Crie uma função que gere um número aleatório entre 0 e 100. Você i
     .spyOn(functionNumber, "randNumber")
     .mockReturnValue(10);
     
-    mockRandNumber();
+  mockRandNumber();
   expect(mockRandNumber).toHaveBeenCalled();
   expect(mockRandNumber()).toBe(10);
   expect(mockRandNumber).toHaveBeenCalledTimes(2);
@@ -20,13 +20,35 @@ test("#2 Com a mesma função do exercício anterior, utilizando o mock, crie um
     .spyOn(functionNumber, "randNumber")
     .mockImplementation((a, b) => a / b);
     
-    mockRandNumber();
+  mockRandNumber();
   expect(mockRandNumber).toHaveBeenCalled();
   expect(mockRandNumber(20, 2)).toBe(10);
   expect(mockRandNumber).toHaveBeenCalledTimes(2);
 });
 
 // #3 Ainda com a mesma função do primeiro exercício, utilizando o mock, crie uma nova implementação que receba três parâmetros e retorne sua multiplicação. Após fazer os devidos testes para ela, resete sua implementação e crie uma nova, que receba um parâmetro e retorne seu dobro. Faça os testes necessários.
+
+test("#3 Ainda com a mesma função do primeiro exercício, utilizando o mock, crie uma nova implementação que receba três parâmetros e retorne sua multiplicação. Após fazer os devidos testes para ela, resete sua implementação e crie uma nova, que receba um parâmetro e retorne seu dobro. Faça os testes necessários.", () => {
+  functionNumber.randNumber.mockClear();
+  let mockRandNumber = jest
+    .spyOn(functionNumber, "randNumber")
+    .mockImplementation((a, b, c) => a * b * c);
+    
+  mockRandNumber();
+  expect(mockRandNumber).toHaveBeenCalled();
+  expect(mockRandNumber(2, 3, 4)).toBe(24);
+  expect(mockRandNumber).toHaveBeenCalledTimes(2);
+
+  functionNumber.randNumber.mockReset();
+  mockRandNumber = jest
+    .spyOn(functionNumber, "randNumber")
+    .mockImplementation((a) => a * a);
+
+  mockRandNumber();
+  expect(mockRandNumber).toHaveBeenCalled();
+  expect(mockRandNumber(2)).toBe(4);
+  expect(mockRandNumber).toHaveBeenCalledTimes(2);
+});
 
 // #4 Dentro de um mesmo arquivo, crie três funções. A primeira deve receber uma string e retorná-la em caixa alta. A segunda deve também receber uma string e retornar só a primeira letra. A terceira deve receber duas strings e concatená-las. Faça o mock do arquivo. Faça uma nova implementação para a primeira função, mas agora ela deve retornar a string em caixa baixa. Para a segunda função, uma nova implementação deve retornar a última letra de uma string. A terceira deve receber três strings e concatená-las.
 
