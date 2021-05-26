@@ -12,9 +12,11 @@ function Calculadora() {
 
       <div className='calc-buttons' >
         <div className='calc-operators' key='calc-operators'>
-          {operations.map((op) => <Buttons value={op} click={() => isNaN(Number(state.substr(-1)))
-            ? setState(state.split(' ').map((v, i, a) => v === a[a.length - 1] ? op : v).join(' '))
-            : setState(`${state} ${op}`)} />)}
+          {operations.map((op) => <Buttons value={op} click={() => state === 'Syntax Error' 
+            ? setState('0') 
+            : isNaN(Number(state.substr(-1)))
+              ? setState(state.split(' ').map((v, i, a) => v === a[a.length - 1] ? op : v).join(' '))
+              : setState(`${state} ${op}`)} />)}
           <Buttons value={'AC'} click={() => setState('')} />
         </div>
         <div className='calc-numbers' key='calc-numbers'>
