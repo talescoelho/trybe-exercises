@@ -1,0 +1,47 @@
+.calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 200px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.calc-display {
+  width: 200px;
+  border: 1px solid black;
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 30%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button-0 {
+  width: 90%;
+}
+
+.button-Calcular {
+  width: 90%;
+}
+
+.calc-operators {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-operators button {
+  width: 25%;
+}
+
+.calc-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}

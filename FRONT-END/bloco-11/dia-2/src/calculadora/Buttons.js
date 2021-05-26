@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Buttons(value) {
-  console.log(value);
+function Buttons(key) {
+  // console.log(key);
   return (
-    <button>
-      {value}
+    <button key={key.value} onClick={key.click} className={`button-${key.value}`} >
+      {key.value}
     </button>
   )
 }
