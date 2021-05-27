@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const sumOne = (s, i, n) => {
+  return i === n ? s + 1 : s;
 }
 
-export default App;
+export default function App() {
+  const [state, setState] = React.useState([0, 0, 0]);
+  console.log(state.a);
+  return (
+    <div>
+      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 0)))}> Click {state[0]} </button>
+      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 1)))}> Click {state[1]} </button>
+      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 2)))}> Click {state[2]} </button>
+    </div>
+  )
+}
