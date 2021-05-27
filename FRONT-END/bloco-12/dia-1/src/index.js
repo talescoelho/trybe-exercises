@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 // import ProfileApp from './ProfileApp';
 import Pokedex from './Pokedex';
 // import Calculadora from './calculadora/Calculadora'
+// import Buttons from './Buttons'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
     <ProfileApp /> */}
     <Pokedex />
     {/* <Calculadora /> */}
+    {/* <Buttons /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
