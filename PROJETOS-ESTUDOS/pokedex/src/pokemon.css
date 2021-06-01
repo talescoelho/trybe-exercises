@@ -1,0 +1,33 @@
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid red;
+  align-items: center;
+  margin: 5px;
+}
+
+.pokemon-name {
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+
+.pokemon-div-image {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid blue;
+}
+
+.pokemon-image {
+  width: unset;
+}
+
+.pokemon-card-button {
+  margin: 5px 0;
+  border: 0;
+  background-color: skyblue;
+}
