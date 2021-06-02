@@ -9,7 +9,7 @@
 👤 **Tales Coelho**
 
 * Github: [@talescoelho](https://github.com/talescoelho)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/tales-coelho\/](https://linkedin.com/in/tales-coelho\/)
+* LinkedIn: [@tales-coelho](https://linkedin.com/in/tales-coelho)
 
 ## Show your support
 
