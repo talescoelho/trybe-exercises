@@ -1,0 +1,19 @@
+.body-container {
+  margin: 0 auto;
+  width: 75vw;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.mode {
+  margin-top: 40px;
+  margin-left: 5px;
+}

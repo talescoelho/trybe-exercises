@@ -1,0 +1,14 @@
+.show {
+  animation-name: animacao;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes animacao {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
