@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.main-container {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  font-size: large;
+  line-height: 1.8;
+  letter-spacing: 1.8px;
+}
