@@ -1,17 +1,34 @@
-import React from 'react';
+import Pokemon from './Pokemon';
+import React, { useEffect } from 'react';
+import Data from './data.json';
+import './app.css';
 
-const sumOne = (s, i, n) => {
-  return i === n ? s + 1 : s;
-}
-
-export default function App() {
-  const [state, setState] = React.useState([0, 0, 0]);
-  console.log(state.a);
+function App() {
+  const [page, setPage] = React.useState(0);
+  const pokemonArr = Array.from(
+    { length: 12 },
+    (_, i) => Data.results[i + page],
+  );
   return (
     <div>
-      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 0)))}> Click {state[0]} </button>
-      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 1)))}> Click {state[1]} </button>
-      <button onClick={() => setState(state.map((s, i) => sumOne(s, i, 2)))}> Click {state[2]} </button>
+      <div className="pokemon-card-list">
+        {pokemonArr.map((pokemon, index) => (
+          <Pokemon key={index} pokemon={pokemon} />
+        ))}
+      </div>
+      <div className="buttons" disabled={true}>
+        <button disabled={page <= 0 && true} onClick={() => setPage(page - 1)}>
+          Anterior
+        </button>
+        <button
+          disabled={page >= 151 && true}
+          onClick={() => setPage(page + 1)}
+        >
+          Next
+        </button>
+      </div>
     </div>
-  )
+  );
 }
+
+export default App;
