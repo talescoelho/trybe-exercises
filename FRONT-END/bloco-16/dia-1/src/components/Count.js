@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import Store from '../store/Store';
 
-export default class count extends Component {
+class count extends Component {
   constructor() {
     super();
 
     this.state = {
       number: 0,
-      count: 0,
-      clicks: 0,
-      allValues: [],
     }
     this.somar = this.somar.bind(this);
     this.subtrair = this.subtrair.bind(this);
@@ -22,11 +20,6 @@ export default class count extends Component {
       type: 'INCREMENT',
       number: Number(number),
     })
-    this.setState({
-      count: Store.getState().value,
-      clicks: Store.getState().clicks,
-      allValues: Store.getState().allValues
-    });
   }
 
   subtrair() {
@@ -35,11 +28,6 @@ export default class count extends Component {
       type: 'DECREMENT',
       number: Number(number),
     })
-    this.setState({
-      count: Store.getState().value,
-      clicks: Store.getState().clicks,
-      allValues: Store.getState().allValues
-    });
   }
 
   handleClick({ target: {value} }) {
@@ -47,10 +35,11 @@ export default class count extends Component {
   }
 
   render() {
-    const { number, count, clicks, allValues } = this.state;
+    const { number } = this.state;
+    const { newValue: { value, clicks, allValues} } = this.props;
     return (
       <div>
-        Contador: { count } Clicks: { clicks } <br/><br/>
+        Contador: { value } Clicks: { clicks } <br/><br/>
         <input type="number" value={number} onChange={this.handleClick}/>
         <button onClick={this.somar}>Somar</button>
         <button onClick={this.subtrair}>Subtrair</button>
@@ -61,3 +50,9 @@ export default class count extends Component {
     )
   }
 }
+
+const mapStateToProps = (store) => ({
+  newValue: Store.getState()
+});
+
+export default connect(mapStateToProps)(count);
