@@ -1,7 +1,8 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import deleteProduct from '../actions/products/deleteProduct';
 
-export const Products = ({ idShop = false, registers, shopProducts }) => {
+export const Products = ({ idShop = false, registers, shopProducts, deleteProduct }) => {
   let allProductShop;
   if (idShop) {
     allProductShop = shopProducts.filter(({ product }) => product.storeId === idShop);
@@ -11,15 +12,17 @@ export const Products = ({ idShop = false, registers, shopProducts }) => {
   return (
     <div>
       { allProductShop.length > 0 
-        ? allProductShop.map(({ product }) => {
-        const ShopName = registers.find(({ id }) => (id === product.storeId ) );
+        ? allProductShop.map((productItens, index) => {
+          const { product } = productItens;
+          const ShopName = registers.find(({ id }) => (id === product.storeId ) );
           return (
-            <div>
+            <div key={ index }>
               <span>{ product.productNome } </span><span>- R$: { product.preco },00 </span>
-              <span>- Loja: {ShopName.name}</span>
+              <span>- Estoque: {product.quant} - </span><span> {ShopName.name} - </span>
+              <img src={product.url} alt={product.productNome} width="50px"/>
               {!idShop
                 ? <button type="button">Comprar</button>
-                : <button type="button">Excluir Produto</button>
+                : <button type="button" onClick={ () => deleteProduct(productItens.productId) }>Excluir Produto</button>
               }
             </div>
           )
@@ -35,8 +38,8 @@ const mapStateToProps = (state) => ({
   shopProducts: state.ProductsReducer.shopProducts,
 })
 
-const mapDispatchToProps = {
-  
-}
+const mapDispatchToProps = (dispatch) => ({
+  deleteProduct: (productId) => dispatch(deleteProduct(productId))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products)

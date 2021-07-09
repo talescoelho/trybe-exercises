@@ -5,7 +5,7 @@ import addProduct from '../actions/products/addProduct';
 import Products from '../components/Products';
 import Logout from '../components/Logout';
 
-export const Shop = ({ registers, logedId, categories, addProduct, logout }) => {
+export const Shop = ({ registers, logedId, categories, addProduct }) => {
   const logedUser = registers.find(({ id }) => id === logedId );
   const [state, setState] = useState({ storeId: logedId })
   if (!logedUser) {
@@ -70,7 +70,7 @@ export const Shop = ({ registers, logedId, categories, addProduct, logout }) => 
           ))}
         </select>
       </label><br/>
-      {/* <label htmlFor="url">
+      <label htmlFor="url">
         URL da imagem do produto:  
         <input
           type="text"
@@ -79,8 +79,8 @@ export const Shop = ({ registers, logedId, categories, addProduct, logout }) => 
           placeholder="URL do produto"
           onChange={ handleChange }
           />
-      </label><br/> */}
-      <button type="button" onClick={() => addProduct(state)}>Adicionar Produto</button>
+      </label><br/>
+      <button type="button" onClick={ () => addProduct(state) }>Adicionar Produto</button>
       <Products idShop={logedId} />
     </div>
   )
